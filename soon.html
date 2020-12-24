@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+</style>
+<body>
+<head>
+  <title>Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<div class="bgimg">
+  
+  <div class="topleft">
+   <!--<p>Yassin Wael</p>-->
+   <img class="logo" src="yasso.png" width="150">
+  </div>
+        <section>
+        <ul class="nav" id="nav">
+      <li><a href="file:///C:/Users/yasin/Desktop/web/Home/Home.html" target="_blank">Home</a></li>
+      <li><a href="file:///C:/Users/yasin/Desktop/web/Releases/releases.html" target="_blank">Releases</a></li>
+      <li><a href="file:///C:/Users/yasin/Desktop/web/About/index.html" target="_blank">About</a>
+      <li><a href="file:///C:/Users/yasin/Desktop/web/Contact%20Me/main.html" target="_blank">Contact</a></li>
+      <li><a href="file:///C:/Users/yasin/Desktop/web/Coming%20soon/coming.html" class="active">Coming Soon</a></li>
+      </li>
+        </ul>
+    </section>
+    <div class="middle">
+    <h1>COMING SOON</h1>
+    <hr>
+    <p id="demo" style="font-size:30px"></p>
+  </div>
+  <div class="bottomleft">
+    <p>No Releases have been provided yet</p>
+
+  </div>
+</div>
+<body>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+  
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+  
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+    <span class="menuicon" id="toggle" onclick="menuToggle()"></span>
+    <script type="text/javascript">
+        function menuToggle(){
+            var nav = document.getElementById("nav");
+            nav.classList.toggle('active')
+            var toggle = document.getElementById("toggle");
+            toggle.classList.toggle('active')
+        } 
+    </script>
+</body>
+    <div id="footer">
+      <footer>© 2020 Yassin Wael AB, All Rights Reversed</footer>   
+    <ul class="footer">
+      <li><a href="https://g.co/kgs/2XLnxb" target="_blank">Google</a></li>
+      <li><a href="https://www.facebook.com/YassinWael.x/" target="_blank">Facebook</a></li>
+      <li><a href="https://www.instagram.com/yassinwael.ae/" target="_blank">Instagram</a></li>
+      <li><a href="https://twitter.com/YassinWaell" target="_blank">Twitter</a></li>
+    </ul>
+    </div>
+</html>
